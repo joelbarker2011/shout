@@ -16,9 +16,9 @@
       <tr>
         <td><%= shout_out.comment %></td>
         <td><%= shout_out.confirmed %></td>
-        <td><%= link_to 'Show', shout_out %></td>
-        <td><%= link_to 'Edit', edit_shout_out_path(shout_out) %></td>
-        <td><%= link_to 'Destroy', shout_out, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', shout_out, class: 'btn btn-default' %></td>
+        <td><%= link_to 'Edit', edit_shout_out_path(shout_out), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Destroy', shout_out, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Shout Out', new_shout_out_path %>
+<%= link_to 'New Shout Out', new_shout_out_path, class: 'btn btn-default' %>
