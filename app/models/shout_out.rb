@@ -1,0 +1,2 @@
+class ShoutOut < ApplicationRecord
+end

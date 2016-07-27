@@ -1,0 +1,27 @@
+<%= form_for(shout_out) do |f| %>
+  <% if shout_out.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(shout_out.errors.count, "error") %> prohibited this shout_out from being saved:</h2>
+
+      <ul>
+      <% shout_out.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_field :comment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :confirmed %>
+    <%= f.check_box :confirmed %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

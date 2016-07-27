@@ -1,0 +1,1 @@
+json.partial! "shout_outs/shout_out", shout_out: @shout_out
