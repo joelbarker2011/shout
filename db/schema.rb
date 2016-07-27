@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727224503) do
+ActiveRecord::Schema.define(version: 20160727225638) do
 
   create_table "shout_outs", force: :cascade do |t|
     t.string   "comment",                    null: false
     t.boolean  "confirmed",  default: false, null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.float    "accuracy"
   end
 
 end
