@@ -11,38 +11,38 @@
     </div>
   <% end %>
 
-  <fieldset>
+  <fieldset class="form-group">
     <div class="field">
       <%= f.label :comment %>
       <%= f.text_area :comment %>
     </div>
   </fieldset>
 
-  <fieldset>
-    <div class="field">
+  <fieldset class="form-group">
+    <div class="field col-xs-4">
       <%= f.label :latitude%>
       <%= f.number_field :latitude, readonly: true, data: { geolocation: 'latitude' } %>
     </div>
 
-    <div class="field">
+    <div class="field col-xs-4">
       <%= f.label :longitude %>
       <%= f.number_field :longitude, readonly: true, data: { geolocation: 'longitude' } %>
     </div>
 
-    <div class="field">
+    <div class="field col-xs-4">
       <%= f.label :accuracy %>
       <%= f.number_field :accuracy, readonly: true, data: { geolocation: 'accuracy' } %>
     </div>
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form-group">
     <div class="field">
       <%= f.label :confirmed %>
       <%= f.check_box :confirmed %>
     </div>
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form-group">
     <div class="actions">
       <%= f.submit %>
     </div>
