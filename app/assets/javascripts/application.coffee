@@ -19,7 +19,7 @@
 
 $ ->
   geoInputs = $('input[data-geolocation]')
-  if geoInputs.length && ! geoInputs[0].val()
+  if geoInputs.length && ! geoInputs.val()
     navigator.geolocation.getCurrentPosition(
       (pos) ->
         console.log pos
