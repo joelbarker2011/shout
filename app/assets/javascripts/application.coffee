@@ -17,7 +17,7 @@
 #= require jquery
 #= require bootstrap-sprockets
 
-$ ->
+$(document).on 'turbolinks:load', ->
   geoInputs = $('input[data-geolocation]')
   if geoInputs.length && ! geoInputs.val()
     navigator.geolocation.getCurrentPosition(

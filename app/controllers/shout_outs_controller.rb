@@ -4,7 +4,7 @@ class ShoutOutsController < ApplicationController
   # GET /shout_outs
   # GET /shout_outs.json
   def index
-    @shout_outs = ShoutOut.all
+    @shout_outs = ShoutOut.all  #where(confirmed: true)
   end
 
   # GET /shout_outs/1
@@ -69,6 +69,6 @@ class ShoutOutsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shout_out_params
-      params.require(:shout_out).permit(:comment, :confirmed)
+      params.require(:shout_out).permit(:comment, :latitude, :longitude, :accuracy)
     end
 end

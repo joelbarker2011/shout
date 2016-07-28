@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Comment</th>
-      <th>Confirmed</th>
+      <th>Location</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,7 +17,7 @@
     <% @shout_outs.each do |shout_out| %>
       <tr>
         <td><%= shout_out.comment %></td>
-        <td><%= shout_out.confirmed %></td>
+        <td><%= shout_out.map_link ? link_to('Map', shout_out.map_link, target: 'map', class: 'btn btn-default') : nil %></td>
         <td><%= link_to 'Show', shout_out, class: 'btn btn-default' %></td>
         <td><%= link_to 'Edit', edit_shout_out_path(shout_out), class: 'btn btn-default' %></td>
         <td><%= link_to 'Destroy', shout_out, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %></td>
