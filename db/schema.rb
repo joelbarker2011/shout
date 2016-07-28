@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727225638) do
+ActiveRecord::Schema.define(version: 20160728004313) do
 
   create_table "shout_outs", force: :cascade do |t|
     t.string   "comment",                    null: false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160727225638) do
     t.float    "latitude"
     t.float    "longitude"
     t.float    "accuracy"
+    t.string   "added_by"
   end
 
 end
