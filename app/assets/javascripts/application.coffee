@@ -34,3 +34,7 @@ $ ->
         timeout: 10 * 1000          # 10 seconds
         maximumAge: 10 * 60 * 1000  # 10 minutes
     )
+
+$(document).on 'turbolinks:load', ->
+  $('table[data-layout="datatables"]').DataTable()
+

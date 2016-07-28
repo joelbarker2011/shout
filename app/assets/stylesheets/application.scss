@@ -17,7 +17,7 @@
 @import "bootstrap";
 
 body {
-  margin: 0 auto;
+  margin: 10px auto;
   max-width: 720px;
 }
 
@@ -27,3 +27,5 @@ form { @extend .form-horizontal; }
 
 input, textarea { @extend .form-control; }
 input[type="submit"] { @extend .btn, .btn-primary; }
+
+table { @extend .table; }
